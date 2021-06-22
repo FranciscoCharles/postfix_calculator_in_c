@@ -12,6 +12,7 @@ int main(int argc, char** argv) {
     while(_continue) {
         printf("enter the expression :\n");
         scanf(" %79[^\n]s",str_expression);
+        
         if(strcmp(str_expression,"q")==0 || strcmp(str_expression,"quit")==0) {
             _continue = false;
         } else {
@@ -27,7 +28,7 @@ int main(int argc, char** argv) {
                 printf("postfix notation :\n\t");
                 expression_print(stack_exp);
                 
-                printf("result = %d\n", evaluate_expression(stack_exp));
+                printf("result : %d\n", evaluate_expression(stack_exp));
                 stack = stack_delete(stack);
                 
                 stack_exp = stack_delete(stack_exp);

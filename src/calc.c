@@ -24,6 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+
 bool str_is_operator(char *str) {
     int is_operator = false;
 
@@ -32,11 +33,12 @@ bool str_is_operator(char *str) {
     else if(strcmp("*",str)==0) is_operator = true;
     else if(strcmp("/",str)==0) is_operator = true;
     else if(strcmp("^",str)==0) is_operator = true;
+    else if(strcmp("%",str)==0) is_operator = true;
     return is_operator;
 
 }
 bool str_is_number(char *str) {
-    int i = 0;
+    int i = (str[0]=='+' || str[0]=='-') ? 1 : 0;
     while(str[i]!='\0' && isdigit(str[i])) {
         i++;
     }
@@ -113,7 +115,7 @@ Stack tokenize(Stack stack, char* expression) {
             token = token_create();
             token->is_number = true;
             token->number = atoi(read);
-            stack_push(stack,token);
+            stack_push(stack, token);
 
             must_be_a_operator = true;
             must_be_a_number = false;
@@ -138,6 +140,7 @@ uint_least8_t operator_priority(Token token) {
     switch(token->operator) {
         case '^':
             priority = 4;
+        case '%':
         case '/':
         case '*':
             priority = 3;
@@ -208,6 +211,13 @@ int calc_expression(char operator, Token left, Token right, bool *error) {
             break;
         case '*':
             result = left->number * right->number;
+            break;
+        case '%':
+            if(right->number == 0) {
+                *error = true;
+            } else {
+                result = left->number % right->number;
+            }
             break;
         case '/':
             if(right->number == 0) {
