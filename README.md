@@ -5,12 +5,12 @@
 
 This is an implementation of a calculator that converts infix notation to postfix and calculates the result of the expression, the code is written entirely in **C** and organized into easy-to-view modules. The calculator only accepts space-separated integers. You can use parentheses to organize your expressions. The calculator accepts additions, subitrations, multiplications, divisions, exponentiations and application of the mod operator, in addition to allowing the addition of signs to the number, if desired.
 
-<p align="center">
+<div align="center">
     <figure>
         <img src="example.png" alt="example">
         <figcaption>Figure 1 - example screen of program execution</figcaption>
     </figure>
-</p>
+</div>
 
 # <a name=index>Table of contents 📚</a>
 
