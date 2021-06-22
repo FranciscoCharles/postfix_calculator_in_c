@@ -2,8 +2,9 @@
   <h1>🧮 Posfix Calculator in C 🧮</h1>
   <h6>by <i>FranciscoCharles</i></h6>
 </p>
-
-This is an implementation of a calculator that converts infix notation to postfix and calculates the result of the expression, the code is written entirely in **C** and organized into easy-to-view modules. The calculator only accepts space-separated integers. You can use parentheses to organize your expressions. The calculator accepts additions, subitrations, multiplications, divisions, exponentiations and application of the mod operator, in addition to allowing the addition of signs to the number, if desired.
+<p align="justify">
+This is an implementation of a calculator that converts infix notation to postfix and calculates the result of the expression, the code is written entirely in <b>language C</b> and organized into easy-to-view modules. The calculator only accepts space-separated integers. You can use parentheses to organize your expressions. The calculator accepts additions, subitrations, multiplications, divisions, exponentiations and application of the mod operator, in addition to allowing the addition of signs to the number, if desired.
+</p>
 
 <div align="center">
     <img src="example.png" alt="example">
