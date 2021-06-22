@@ -1,92 +1,56 @@
 <p align="center">
-  <h1>Posfix Calculator in C</h1>
+  <h1>🧮 Posfix Calculator in C 🧮</h1>
   <h6>by <i>FranciscoCharles</i></h6>
 </p>
 
-An interactive Doom fire simulator with a simple options menu developed in **Python** + **Pygame**. In this project it is possible to change the amount of fps, flame decay, wind direction, wind force and make it possible to change the colors of the flames in the **`HSL`**_(hue, saturation, lightness)_ color space, in addition to allowing to turn on/off the flames.
+This is an implementation of a calculator that converts infix notation to postfix and calculates the result of the expression, the code is written entirely in **C** and organized into easy-to-view modules. The calculator only accepts space-separated integers. You can use parentheses to organize your expressions. The calculator accepts additions, subitrations, multiplications, divisions, exponentiations and application of the mod operator, in addition to allowing the addition of signs to the number, if desired.
 
 <p align="center">
-    <img src="example.png">
-    <br>
+    <figure>
+        <img src="example.png" alt="example">
+        <figcaption>Figure 1 - example screen of program execution</figcaption>
+    </figure>
 </p>
-    <h6 aling="center">Figure 1 - example screen of program execution<h6>
 
 # <a name=index>Table of contents 📚</a>
 
-- [**Options menu**](#menu)
-- [**How to use the options menu?**](#using_menu)
-- [**Example of possible colors for the flames**](#example)
+- [**How to use the calculator?**](#using_calculator)
 - [**How can i run?**](#run)
-- [**Honorable mention**](#honorable_mention)
-- [**Dependencies**](#dependencies)
 - [**Version**](#version)
 - [**License**](#license)
 
-# **<a name=menu>Options menu 🧰⚙️</a>** <h6>[back to indice](#index)</h6>
+# **<a name=using_calculator>How to use the calculator 🕹️</a>**  <h6>[back to indice](#index)</h6>
 
-<p align="center">
-  <img src="src/images/opcoes.png">
-</p>
+The implemented calculator uses whole numbers, remember this when running. Each operand / operator must be separated by a space, additional spaces will be discarded.. You can use parentheses to organize expressions if you wish.
+- example :
+```c
+1 + ( 3 * 2 ) * ( 6 / 2 ) = 19
+```
 
-The program has 8 adjustable options and allows you to use the `Q` key to turn the fire on/off. The options currently available are:
+  You can also add `+` or `-` to the beginning of a number to add a sign.
+- example :
+```c
+1 + ( +3 * 2 ) * ( -6 * 2 ) = -17
+```
+  Use the following operators to create your expressions:
 
-- **FPS**:
-  + option to control the SPF, ranging from 10 to 60.
-- **Decay**:
-  + option to control the intensity with which the flames lose strength, varying from 1 to (1-amount of colors available in the color palette).
-- **Wind direction**:
-  + option to control the wind direction, having 3 modes: `right`, `left` and `both`.
-- **Wind force**:
-  + option to control the wind force, ranging from 0 to 10.
-- **Color intensity**:
-  + control option to change the color palette, varies from `True` to `False`.
-
-The options below can only be changed if **`color intensity`** is `True`.
-
-- **H**:
-  + option to control the H component (hue) of the color, ranging from 0 to 360.
-- **S**:
-  + option to control the S component (saturation) of the color, ranging from 0.0 to 1.0.
-- **L**:
-  + option to control the L component (brightness) of the color, ranging from 0.0 to 1.0
-
-# **<a name=using_menu>How to use the options menu 🕹️</a>**  <h6>[back to indice](#index)</h6>
-
-- use `ESC` to exit/close the program.
-- use `Q` to turn the flames on/off 🔥.
-- use `W` or: arrow_up: to select the menu above.
-- use `Z` or: arrow_down: to select the menu below.
-- use `S` or: arrow_right: to increase / change the value of the selected menu.
-- use `A` or: arrow_left: to decrement / change the value of the selected menu.
-
-# **<a name=example>Example of possible colors for the flames 🎨</a>** <h6>[back to indice](#index)</h6>
-
-The image below is a demonstration of the colors that are possible for the flames.
-
-<p align="center">
-  <img src="src/images/firecolor.png" width="600">
-</p>
+- use `*` to represent the multiplication operator.
+- use `+` to represent the addition operator.
+- use `-` to represent the subtraction operator.
+- use `/` to represent the division operator.
+- use `%` to represent the mod operator.
+- use `^` to represent the exponentiation operator.
 
 # **<a name=run>How can I run? 🧠💭</a>** <h6>[back to indice](#index)</h6>
 
-Download the project, install the dependencies, enter the `src` folder and execute:
-```bash
-python main.py
-```
-# **<a name=honorable_mention>Honorable mention 🥇</a>** <h6>[back to indice](#index)</h6>
-
-This project is based on a <a href="https://youtu.be/fxm8cadCqbs" title="go to the Dechamps video tutorial">video</a> from <a href="https://github.com/filipedeschamps"  title="Dechamps github profile">@filipedeschamps</a> , where he brings a doom fire algorithm that he implemented, in the video he explains how the algorithm works in a didactic, practical and simple way. My thanks for sharing your knowledge, diverse and fun content.
-
-# **<a name=dependencies>Dependencies</a>**  <h6>[back to indice](#index)</h6>
-- **Pygame** == **1.9.6**.
-- **Python** == 3.7 or higher.
+go to the `src` folder and compile all the files. after that, run the generated program.
 
 # **<a name=version>Version</a>**  <h6>[back to indice](#index)</h6>
 - current version of the project: 1.0.1.
 
 # **<a name=license>License</a>**  <h6>[back to indice](#index)</h6>
 
-For more information on the license for this project read the <a href="https://github.com/FranciscoCharles/doom-fire-simulator/blob/main/LICENSE" title="go to license file">LICENSE</a> file.
+For more information on the license for this project read the <a href="./LICENSE" title="go to license file">LICENSE</a> file.
 
 ---
 
